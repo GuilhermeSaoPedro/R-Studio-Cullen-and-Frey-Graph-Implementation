@@ -1,0 +1,401 @@
+'R-Studio-Cullen-and-Frey-Graph-Implementation
+'For confidentiality reasons, the data will be represented by the character X.
+
+
+
+R version 4.2.1 (2022-06-23 ucrt) -- "Funny-Looking Kid"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Workspace loaded from ~/.RData]
+
+> install.packages("fitdistrplus")
+Installing package into ‘C:/Users/Guilherme/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/fitdistrplus_1.1-8.zip'
+Content type 'application/zip' length 2841536 bytes (2.7 MB)
+downloaded 2.7 MB
+
+package ‘fitdistrplus’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Guilherme\AppData\Local\Temp\RtmpUf3GhD\downloaded_packages
+> library(fitdistrplus)
+Loading required package: MASS
+Loading required package: survival
+> install.packages("MASS")
+Error in install.packages : Updating loaded packages
+
+Restarting R session...
+
+> install.packages("MASS")
+Installing package into ‘C:/Users/Guilherme/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/MASS_7.3-57.zip'
+Content type 'application/zip' length 1171118 bytes (1.1 MB)
+downloaded 1.1 MB
+
+package ‘MASS’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Guilherme\AppData\Local\Temp\RtmpCk33ZP\downloaded_packages
+> install.packages("survival")
+Installing package into ‘C:/Users/Guilherme/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/survival_3.3-1.zip'
+Content type 'application/zip' length 6858277 bytes (6.5 MB)
+downloaded 6.5 MB
+
+package ‘survival’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Guilherme\AppData\Local\Temp\RtmpCk33ZP\downloaded_packages
+> append(DATA_R_STUDIO)
+Error in append(DATA_R_STUDIO) : 
+  argument "values" is missing, with no default
+> attach(DATA_R_STUDIO)
+> descdist(`XXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",
++          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error in descdist(`XXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",  : 
+  could not find function "descdist"
+> ssd_plot_cf(`XXXXXXXXXX`, left = "Conc")
+Error in ssd_plot_cf(`XXXXXXXXXXXX`, left = "Conc") : 
+  could not find function "ssd_plot_cf"
+> install.packages("ssdtools")
+Installing package into ‘C:/Users/Guilherme/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘listenv’, ‘parallelly’, ‘colorspace’, ‘tidyselect’, ‘rbibutils’, ‘future’, ‘globals’, ‘iterators’, ‘digest’, ‘gtable’, ‘isoband’, ‘withr’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘dplyr’, ‘Rdpack’, ‘stringi’, ‘RcppEigen’, ‘abind’, ‘chk’, ‘doFuture’, ‘foreach’, ‘furrr’, ‘generics’, ‘ggplot2’, ‘goftest’, ‘plyr’, ‘purrr’, ‘scales’, ‘ssddata’, ‘stringr’, ‘TMB’, ‘universals’, ‘VGAM’
+
+
+  There is a binary version available but the source version is later:
+         binary source needs_compilation
+generics  0.1.2  0.1.3             FALSE
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/listenv_0.8.0.zip'
+Content type 'application/zip' length 106660 bytes (104 KB)
+downloaded 104 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/parallelly_1.32.0.zip'
+Content type 'application/zip' length 305041 bytes (297 KB)
+downloaded 297 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/colorspace_2.0-3.zip'
+Content type 'application/zip' length 2630622 bytes (2.5 MB)
+downloaded 2.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/tidyselect_1.1.2.zip'
+Content type 'application/zip' length 206226 bytes (201 KB)
+downloaded 201 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/rbibutils_2.2.8.zip'
+Content type 'application/zip' length 772534 bytes (754 KB)
+downloaded 754 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/future_1.26.1.zip'
+Content type 'application/zip' length 705090 bytes (688 KB)
+downloaded 688 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/globals_0.15.1.zip'
+Content type 'application/zip' length 104300 bytes (101 KB)
+downloaded 101 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/iterators_1.0.14.zip'
+Content type 'application/zip' length 353257 bytes (344 KB)
+downloaded 344 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/digest_0.6.29.zip'
+Content type 'application/zip' length 194515 bytes (189 KB)
+downloaded 189 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/gtable_0.3.0.zip'
+Content type 'application/zip' length 434476 bytes (424 KB)
+downloaded 424 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/isoband_0.2.5.zip'
+Content type 'application/zip' length 2179284 bytes (2.1 MB)
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/withr_2.5.0.zip'
+Content type 'application/zip' length 231881 bytes (226 KB)
+downloaded 226 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/farver_2.1.0.zip'
+Content type 'application/zip' length 1519733 bytes (1.4 MB)
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/labeling_0.4.2.zip'
+Content type 'application/zip' length 62511 bytes (61 KB)
+downloaded 61 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/munsell_0.5.0.zip'
+Content type 'application/zip' length 245100 bytes (239 KB)
+downloaded 239 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/RColorBrewer_1.1-3.zip'
+Content type 'application/zip' length 55837 bytes (54 KB)
+downloaded 54 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/viridisLite_0.4.0.zip'
+Content type 'application/zip' length 1299483 bytes (1.2 MB)
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/dplyr_1.0.9.zip'
+Content type 'application/zip' length 1300222 bytes (1.2 MB)
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/Rdpack_2.3.1.zip'
+Content type 'application/zip' length 957757 bytes (935 KB)
+downloaded 935 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/stringi_1.7.6.zip'
+Content type 'application/zip' length 14173262 bytes (13.5 MB)
+downloaded 13.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/RcppEigen_0.3.3.9.2.zip'
+Content type 'application/zip' length 2283900 bytes (2.2 MB)
+downloaded 2.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/abind_1.4-5.zip'
+Content type 'application/zip' length 63750 bytes (62 KB)
+downloaded 62 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/chk_0.8.0.zip'
+Content type 'application/zip' length 329053 bytes (321 KB)
+downloaded 321 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/doFuture_0.12.2.zip'
+Content type 'application/zip' length 83337 bytes (81 KB)
+downloaded 81 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/foreach_1.5.2.zip'
+Content type 'application/zip' length 147997 bytes (144 KB)
+downloaded 144 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/furrr_0.3.0.zip'
+Content type 'application/zip' length 1024136 bytes (1000 KB)
+downloaded 1000 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggplot2_3.3.6.zip'
+Content type 'application/zip' length 4122875 bytes (3.9 MB)
+downloaded 3.9 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/goftest_1.2-3.zip'
+Content type 'application/zip' length 64468 bytes (62 KB)
+downloaded 62 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/plyr_1.8.7.zip'
+Content type 'application/zip' length 1152206 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/purrr_0.3.4.zip'
+Content type 'application/zip' length 408515 bytes (398 KB)
+downloaded 398 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/scales_1.2.0.zip'
+Content type 'application/zip' length 614287 bytes (599 KB)
+downloaded 599 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ssddata_1.0.0.zip'
+Content type 'application/zip' length 116545 bytes (113 KB)
+downloaded 113 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/stringr_1.4.0.zip'
+Content type 'application/zip' length 216543 bytes (211 KB)
+downloaded 211 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/TMB_1.9.0.zip'
+Content type 'application/zip' length 1876511 bytes (1.8 MB)
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/universals_0.0.4.zip'
+Content type 'application/zip' length 71764 bytes (70 KB)
+downloaded 70 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/VGAM_1.1-6.zip'
+Content type 'application/zip' length 7329358 bytes (7.0 MB)
+downloaded 7.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ssdtools_1.0.2.zip'
+Content type 'application/zip' length 3149779 bytes (3.0 MB)
+downloaded 3.0 MB
+
+package ‘listenv’ successfully unpacked and MD5 sums checked
+package ‘parallelly’ successfully unpacked and MD5 sums checked
+package ‘colorspace’ successfully unpacked and MD5 sums checked
+package ‘tidyselect’ successfully unpacked and MD5 sums checked
+package ‘rbibutils’ successfully unpacked and MD5 sums checked
+package ‘future’ successfully unpacked and MD5 sums checked
+package ‘globals’ successfully unpacked and MD5 sums checked
+package ‘iterators’ successfully unpacked and MD5 sums checked
+package ‘digest’ successfully unpacked and MD5 sums checked
+package ‘gtable’ successfully unpacked and MD5 sums checked
+package ‘isoband’ successfully unpacked and MD5 sums checked
+package ‘withr’ successfully unpacked and MD5 sums checked
+package ‘farver’ successfully unpacked and MD5 sums checked
+package ‘labeling’ successfully unpacked and MD5 sums checked
+package ‘munsell’ successfully unpacked and MD5 sums checked
+package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+package ‘viridisLite’ successfully unpacked and MD5 sums checked
+package ‘dplyr’ successfully unpacked and MD5 sums checked
+package ‘Rdpack’ successfully unpacked and MD5 sums checked
+package ‘stringi’ successfully unpacked and MD5 sums checked
+package ‘RcppEigen’ successfully unpacked and MD5 sums checked
+package ‘abind’ successfully unpacked and MD5 sums checked
+package ‘chk’ successfully unpacked and MD5 sums checked
+package ‘doFuture’ successfully unpacked and MD5 sums checked
+package ‘foreach’ successfully unpacked and MD5 sums checked
+package ‘furrr’ successfully unpacked and MD5 sums checked
+package ‘ggplot2’ successfully unpacked and MD5 sums checked
+package ‘goftest’ successfully unpacked and MD5 sums checked
+package ‘plyr’ successfully unpacked and MD5 sums checked
+package ‘purrr’ successfully unpacked and MD5 sums checked
+package ‘scales’ successfully unpacked and MD5 sums checked
+package ‘ssddata’ successfully unpacked and MD5 sums checked
+package ‘stringr’ successfully unpacked and MD5 sums checked
+package ‘TMB’ successfully unpacked and MD5 sums checked
+package ‘universals’ successfully unpacked and MD5 sums checked
+package ‘VGAM’ successfully unpacked and MD5 sums checked
+package ‘ssdtools’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Guilherme\AppData\Local\Temp\RtmpCk33ZP\downloaded_packages
+installing the source package ‘generics’
+
+trying URL 'https://cran.rstudio.com/src/contrib/generics_0.1.3.tar.gz'
+Content type 'application/x-gzip' length 172201 bytes (168 KB)
+downloaded 168 KB
+
+* installing *source* package 'generics' ...
+** package 'generics' successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (generics)
+
+The downloaded source packages are in
+	‘C:\Users\Guilherme\AppData\Local\Temp\RtmpCk33ZP\downloaded_packages’
+> ssd_plot_cf(`XXXXXXXX`, left = "Conc")
+Error in ssd_plot_cf(`XXXXXXXXXX`, left = "Conc") : 
+  could not find function "ssd_plot_cf"
+> ssd_plot_cf(`XXXXXXXXXXX`)
+Error in ssd_plot_cf(`XXXXXXXXXXX`) : 
+  could not find function "ssd_plot_cf"
+> update.packages(checkBuilt = TRUE, ask = FALSE)
+Warning in install.packages(update[instlib == l, "Package"], l, repos = repos,  :
+  'lib = "C:/Program Files/R/R-4.2.1/library"' is not writable
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/nlme_3.1-158.zip'
+Content type 'application/zip' length 2329239 bytes (2.2 MB)
+downloaded 2.2 MB
+
+package ‘nlme’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\Guilherme\AppData\Local\Temp\RtmpCk33ZP\downloaded_packages
+> library(ssdtools)
+Please replace the following in your scripts:
+- `ssdtools::boron_data` with `ssddata::ccme_boron`
+- `ssdtools::ccme_data` with `ssddata::ccme_data`
+> ssd_plot_cf(`XXXXXXXXXXX`)
+Error in `err()`:
+! `data` must inherit from S3 class 'data.frame'.
+Run `rlang::last_error()` to see where the error occurred.
+Warning message:
+`ssd_plot_cf()` was deprecated in ssdtools 0.3.5.
+Please use `fitdistrplus::descdist()` instead.
+Please use fitdistrplus::descdist(data$Conc, boot = 100L). 
+> descdist(`XXXXXXXXXL`, discrete = FALSE, boot = NULL, method = "unbiased",
++          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error in descdist(`XXXXXXXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",  : 
+  could not find function "descdist"
+> library(fitdistrplus)
+Loading required package: MASS
+Loading required package: survival
+> descdist(`XXXXXXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",
++          +          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error: unexpected '=' in:
+"descdist(`XXXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",
+         +          graph ="
+> descdist(`XXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased", graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error in plot.window(...) : need finite 'xlim' values
+> descdist(`XXXXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",
++          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error in plot.window(...) : need finite 'xlim' values
+> na.omit(`XXXXXXXXXX`)
+ [1]  219  488  508  508  520  556  582  599  611  624  625  637  812  849  892 1213 1298
+attr(,"na.action")
+[1] 18 19
+attr(,"class")
+[1] "omit"
+> descdist([1], discrete = FALSE, boot = NULL, method = "unbiased",
+Error: unexpected '[' in "descdist(["
+>          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error: unexpected ',' in "         graph = TRUE,"
+> descdist([1], discrete = FALSE, boot = NULL, method = "unbiased",
+Error: unexpected '[' in "descdist(["
+>          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+Error: unexpected ',' in "         graph = TRUE,"
+> descdist(`XXXXXXXXXXXX`, discrete = FALSE, boot = NULL, method = "unbiased",
++          graph = TRUE, obs.col = "darkblue", obs.pch = 16, boot.col = "orange")
+summary statistics
+------
+min:  152   max:  768 
+median:  322 
+mean:  357.1579 
+estimated sd:  163.3552 
+estimated skewness:  1.319608 
+estimated kurtosis:  4.315628
+
+
+
+
+install.packages("ssdtools")
+library(ssdtools)
+install rtools
+
+Package 'fitdistrplus' is required to produce Cullen and Frey plots.
+install.packages("fitdistrplus")
+`ssd_plot_cf()` was deprecated in ssdtools 0.3.5.
+
+install.packages("MASS")
+
+x <- c(219, 488, 508, 508, 520, 556, 582, 599, 611, 624, 625, 637, 812, 849, 892, 1213, 1298)
+
+
+
+
+
+
+
+
+
+
+
+XXXXXXXXXXXXXXXXX
+> fitdistrplus::descdist(x)
+summary statistics
+------
+min:  219   max:  1298 
+median:  611 
+mean:  678.8824 
+estimated sd:  266.3862 
+estimated skewness:  1.06591 
+estimated kurtosis:  4.41267
+XXXXXXXXXXXXXXXXXXXXXXXXXX
